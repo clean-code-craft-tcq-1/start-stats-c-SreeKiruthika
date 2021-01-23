@@ -11,8 +11,8 @@ typedef void (*alerter_funcptr)();
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats);
 
 // Alert functions
-alerter_funcptr emailAlerter;
-alerter_funcptr ledAlerter ;
+void emailAlerter();
+void ledAlerter();
 
 //End of alert functions
 extern int emailAlertCallCount;
