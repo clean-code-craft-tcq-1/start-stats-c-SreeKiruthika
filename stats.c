@@ -33,7 +33,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 {
     emailAlertCallCount = 0;
     ledAlertCallCount = 0;
-    if ( computedStats .average > maxThreshold)
+    if ( computedStats.average > maxThreshold)
     {
         //change to for loop with size of
         alerters[0];
@@ -41,12 +41,12 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
     }
 }
 
-void *emailAlerter ()
+void ( *emailAlerter) ()
 {
     emailAlertCallCount = 1;
 }   
 
-void *ledAlerter () 
+void (* ledAlerter) () 
 {
     ledAlertCallCount = 1;
 }
