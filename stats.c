@@ -7,21 +7,30 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.max =  numberset[0];
     float sum = 0;
     
-    for(int i = 0 ; i < setlength ;  i++ )
+    if (setlength == 0)
     {
-        sum += numberset[i];
-        /*To calculate minimim of array*/
-        if ( numberset[i] < s.min)
-        {
-            s.min =  numberset[i];
-        }
-         /*To calculate maximum of array*/
-        if ( numberset[i] > s.max)
-        {
-            s.max =  numberset[i];
-        }
+        s.average = NaN ;
+        s.min = NaN;
+        s.max =  NaN;
     }
-    s.average = sum / setlength ;
+    else
+    {
+            for(int i = 0 ; i < setlength ;  i++ )
+            {
+                sum += numberset[i];
+                /*To calculate minimim of array*/
+                if ( numberset[i] < s.min)
+                {
+                    s.min =  numberset[i];
+                }
+                /*To calculate maximum of array*/
+                if ( numberset[i] > s.max)
+                {
+                    s.max =  numberset[i];
+            }
+            s.average = sum / setlength ;
+    }
+    
   
     return (s);  
 }
