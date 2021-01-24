@@ -10,9 +10,9 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     
     if (setlength == 0)
     {
-        s.average = 0.0/0.0 ;
-        s.min = 0.0/0.0;
-        s.max = 0.0/0.0;
+        s.average = sqrt(-1) ;
+        s.min = sqrt(-1) ;
+        s.max = sqrt(-1) ;
     }
     else
     {
