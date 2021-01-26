@@ -1,3 +1,5 @@
+#include "stats.h"
+
 #define MAXCOUNT 100
 
 extern int emailAlertCallCount;
