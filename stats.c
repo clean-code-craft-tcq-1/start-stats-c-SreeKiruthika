@@ -56,7 +56,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
 void emailAlerter()
 {
     /*Increase the Email alert call count */
-    if (emailAlertCallCount < MAXINT)
+    if (emailAlertCallCount < MAXCOUNT)
     {
         emailAlertCallCount++;
     }
@@ -65,7 +65,7 @@ void emailAlerter()
 void ledAlerter() 
 {
     /*Increase the LED alert call count */
-    if(ledAlertCallCount < MAXINT)
+    if(ledAlertCallCount < MAXCOUNT)
     {
         ledAlertCallCount++;
     }
