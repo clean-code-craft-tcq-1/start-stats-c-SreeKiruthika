@@ -58,7 +58,7 @@ void emailAlerter()
     /*Increase the Email alert call count */
     if (emailAlertCallCount < MAXCOUNT)
     {
-        emailAlertCallCount++;
+        ++emailAlertCallCount;
     }
 }   
 
@@ -67,6 +67,6 @@ void ledAlerter()
     /*Increase the LED alert call count */
     if(ledAlertCallCount < MAXCOUNT)
     {
-        ledAlertCallCount++;
+        ++ledAlertCallCount;
     }
 }
