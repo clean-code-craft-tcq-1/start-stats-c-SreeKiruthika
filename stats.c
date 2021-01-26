@@ -46,6 +46,7 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
     if ( computedStats.average > maxThreshold)
     {
         int num_func = sizeof(alerters) / sizeof(alerters[0]);
+        printf("func = %d",num_func);
         for(int i = 0 ; i < num_func ; i++)
         {
             alerters[i]();
