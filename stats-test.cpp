@@ -1,8 +1,12 @@
 #define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
 
 #include "catch.hpp"
+#ifdef _STATS_H
 #include "stats.h"
+#endif
+#ifndef _ALERTFUNC_H
 #include "alertfunc.h"
+#endif
 
 #include <stdlib.h>
 #include <math.h>
