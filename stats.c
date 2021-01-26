@@ -1,6 +1,6 @@
 #include "stats.h"
 #include "math.h"
-
+/*Function to compute the average , min and max of a number set */
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     s.average = 0;
@@ -33,7 +33,6 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
             s.average = sum / setlength ;
     }
     
-  
     return (s);  
 }
 
@@ -46,18 +45,28 @@ void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stat
     ledAlertCallCount = 0;
     if ( computedStats.average > maxThreshold)
     {
-        //change to for loop with size of
-        alerters[0]();
-        alerters[1]();
+        int num_func = sizeof(alerters) / sizeof(alerters[0]);
+        for(int i = 0 ; i < num_func ; i++)
+        {
+            alerters[i]();
+        }
     }
 }
 
 void emailAlerter()
 {
-    emailAlertCallCount = 1;
+    /*Increase the Email alert call count */
+    if (emailAlertCallCount < MAXINT)
+    {
+        emailAlertCallCount++;
+    }
 }   
 
 void ledAlerter() 
 {
-    ledAlertCallCount = 1;
+    /*Increase the LED alert call count */
+    if(ledAlertCallCount < MAXINT)
+    {
+        ledAlertCallCount++;
+    }
 }
