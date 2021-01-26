@@ -1,3 +1,4 @@
+#include "alertfunc.h"
 #define TRUE 1
 
 struct Stats
