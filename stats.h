@@ -1,4 +1,5 @@
 #define TRUE 1
+#define MAXCOUNT 100
 struct Stats
 {
   float average;
