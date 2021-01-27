@@ -5,7 +5,7 @@ int ledAlertCallCount = 0 ;
 
 void check_and_alert(float maxThreshold, alerter_funcptr alerters[], struct Stats computedStats)
 {
-    if ( computedStats.average > maxThreshold)
+    if ( computedStats.max > maxThreshold)
     {
         int num_func = 2;
         for(int i = 0 ; i < num_func ; i++)
