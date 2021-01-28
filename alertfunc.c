@@ -42,11 +42,11 @@ void ledAlerter()
     }
     int i = 0;
     int wait_count = 1000;
-    bool ledblink = 1; // Turn ON LED
+    bool ledblink = 1; // Turn ON LED- this is with a intend to set a PIN output high, hence it is not a return value of this function
     /*Wait time loop*/
     while(i < wait_count)
     {
         i++;
     }
-    ledblink = 0 ; //Turn OFF LED 
+    ledblink = 0 ; //Turn OFF LED -- this is with a intend to set a PIN output Low, hence it is not a return value of this function
 }
