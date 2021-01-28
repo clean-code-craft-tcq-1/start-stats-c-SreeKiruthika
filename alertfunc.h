@@ -1,4 +1,7 @@
 #include "stats.h"
+#include "stdlib.h"
+#include "string.h'
+
 
 #define MAXCOUNT 100
 
