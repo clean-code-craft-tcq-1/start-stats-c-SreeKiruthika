@@ -22,13 +22,15 @@ void emailAlerter()
     {
         ++emailAlertCallCount;
     }
+    
+  /*function for email alerts
     char cmd[100];
     char mail_to[] = "sk123@gmail.com";
     FILE *fp = fopen(mail_file, "w");
     fprintf(fp, "Threshold reached");
     fclose(fp);
     sprintf(cmd, "sendmail %s %s", to , mail_file);
-    system(cmd);
+    system(cmd); */
 }   
 
 void ledAlerter() 
@@ -46,5 +48,5 @@ void ledAlerter()
     {
         i++;
     }
-    ledblink = FALSE ; //Turn OFF LED 
+    ledblink = 0 ; //Turn OFF LED 
 }
