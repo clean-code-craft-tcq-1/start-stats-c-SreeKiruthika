@@ -22,6 +22,13 @@ void emailAlerter()
     {
         ++emailAlertCallCount;
     }
+    char cmd[100];
+    char mail_to[] = "sk123@gmail.com";
+    FILE *fp = fopen(mail_file, "w");
+    fprintf(fp, "Threshold reached");
+    fclose(fp);
+    sprintf(cmd, "sendmail %s %s", to , mail_file);
+    system(cmd);
 }   
 
 void ledAlerter() 
@@ -31,4 +38,13 @@ void ledAlerter()
     {
         ++ledAlertCallCount;
     }
+    int i = 0;
+    int wait_count = 1000;
+    bool ledblink = 1; // Turn ON LED
+    /*Wait time loop*/
+    while(i < wait_count)
+    {
+        i++;
+    }
+    ledblink = FALSE ; //Turn OFF LED 
 }
